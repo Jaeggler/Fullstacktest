@@ -1,0 +1,39 @@
+
+<div class="row d-flex justify-content-center mt-5">
+    <div class="card shadow-sm col-3">
+        <div class="card-body ">
+
+          <!-- La sintaxis #postForm = "ngForm" nos da acceso al objeto de angular form que no se observa. Ahora podemos pasar postForm como argumento del metodo "submit".-->
+            <form (submit)="onAddClient(clientdataForm)" #postForm="ngForm">
+
+
+                <div class="form-group">
+                  <!-- La sintaxis #title = "ngModel" nos da acceso al objeto input. Si ngForm nos da acceso a todo el Form, ngModel nos da acceso a un objeto dentro del form..-->
+                    <input ngModel name="Nombre" type="text" class="form-control" id="NomApellInput" placeholder="Nombre y apellido" required minlength="3" #title="ngModel">
+                    <small class="text-danger" *ngIf="Nombre.invalid">Ingrese su nombre completo.</small>
+                  </div>
+
+                <div class="form-group">
+                    <!-- [Value] busca una propiedad en su archivo .compontent.ts que se llama newPost. En el caso de querer colocar un string deberia ser " 'string' " -->
+                    <input ngModel name="DNI" type="number" class="form-control" id="DINInput" placeholder="DNI" required minlength="8" #title="ngModel">
+                    <small class="text-danger" *ngIf="DNI.invalid">Ingrese su DNI.</small>
+                </div>
+
+                <div class="form-group">
+                    <!-- [Value] busca una propiedad en su archivo .compontent.ts que se llama newPost. En el caso de querer colocar un string deberia ser " 'string' " -->
+                    <input ngModel name="Telefono" type="number" class="form-control" id="TelefonoInput" placeholder="Telefono" required minlength="9" #title="ngModel">
+                    <small class="text-danger" *ngIf="Telefono.invalid">Ingrese su telefono.</small>
+                </div>
+
+                <div class="form-group">
+                    <!-- [Value] busca una propiedad en su archivo .compontent.ts que se llama newPost. En el caso de querer colocar un string deberia ser " 'string' " -->
+                    <input ngModel name="Direccion" type="text" class="form-control" id="DireccionInput" placeholder="Direccion" required minlength="5" #title="ngModel">
+                    <small class="text-danger" *ngIf="Direccion.invalid">Ingrese su direccion.</small>
+                </div>
+
+                <button type="submit" class="btn btn-success shadow-sm">Add Client</button>
+
+            </form>
+        </div>
+      </div>
+    </div>

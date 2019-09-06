@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-8">
+        <div>
+          <p>
+            USER LIST
+          </p>
+        </div>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">USER ID</th>
+                        <th scope="col">Nombre y Apellido</th>
+                        <th scope="col">DNI</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Dirección</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" *ngFor="let client of ClientDataList">1</th>
+                        <td>Mark V</td>
+                        <td>11111111</td>
+                        <td>912345678</td>
+                        <td>CC Arenales - Brena</td>
+                        <td>
+                            <a class="btn btn-danger" href="#" role="button">Delete</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob Thornton</td>
+                        <td>22222222</td>
+                        <td>912345678</td>
+                        <td>CC Arenales - Brena</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+          <div class="mt-3">
+              <a class="btn btn-success" routerLink="/add" role="button">+ Add</a>
+              <a class="btn btn-primary" href="#" role="button">Edit</a>
+          </div>
+
+    </div>
+  </div>
+</div>
+
